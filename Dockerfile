@@ -83,7 +83,7 @@ RUN echo "init-ollama"  >> /opt/ollama/start.sh
 RUN echo "source /opt/intel/oneapi/setvars.sh" >> /opt/ollama/start.sh
 RUN echo "/opt/ollama/ollama serve" >> /opt/ollama/start.sh
 RUN chmod +x /opt/ollama/start.sh
-RUN /opt/ollama/ollama --version
+RUN /opt/ollama/llm_env/lib/python3.11/site-packages/bigdl/cpp/libs/ollama/ollama --version
 
 
 # Install Ollama Portable Zip
