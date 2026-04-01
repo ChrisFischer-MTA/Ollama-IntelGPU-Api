@@ -43,17 +43,17 @@ RUN apt update && \
 # Intel GPU compute user-space drivers
 RUN mkdir -p /tmp/gpu && \
  cd /tmp/gpu && \
- wget https://github.com/oneapi-src/level-zero/releases/download/v1.22.4/level-zero_1.22.4+u24.04_amd64.deb && \
+ wget https://github.com/oneapi-src/level-zero/releases/download/v1.28.0/level-zero_1.28.0+u22.04_amd64.deb && \
 # wget https://github.com/oneapi-src/level-zero/releases/download/v1.21.9/level-zero_1.21.9+u24.04_amd64.deb && \
- wget https://github.com/intel/intel-graphics-compiler/releases/download/v2.14.1/intel-igc-core-2_2.14.1+19448_amd64.deb && \
- wget https://github.com/intel/intel-graphics-compiler/releases/download/v2.14.1/intel-igc-opencl-2_2.14.1+19448_amd64.deb && \
- wget https://github.com/intel/compute-runtime/releases/download/25.27.34303.5/intel-ocloc-dbgsym_25.27.34303.5-0_amd64.ddeb && \
- wget https://github.com/intel/compute-runtime/releases/download/25.27.34303.5/intel-ocloc_25.27.34303.5-0_amd64.deb && \
- wget https://github.com/intel/compute-runtime/releases/download/25.27.34303.5/intel-opencl-icd-dbgsym_25.27.34303.5-0_amd64.ddeb && \
- wget https://github.com/intel/compute-runtime/releases/download/25.27.34303.5/intel-opencl-icd_25.27.34303.5-0_amd64.deb && \
- wget https://github.com/intel/compute-runtime/releases/download/25.27.34303.5/libigdgmm12_22.7.2_amd64.deb && \
- wget https://github.com/intel/compute-runtime/releases/download/25.27.34303.5/libze-intel-gpu1-dbgsym_25.27.34303.5-0_amd64.ddeb && \
- wget https://github.com/intel/compute-runtime/releases/download/25.27.34303.5/libze-intel-gpu1_25.27.34303.5-0_amd64.deb && \
+ wget https://github.com/intel/intel-graphics-compiler/releases/download/v2.30.1/intel-igc-core-2_2.30.1+20950_amd64.deb && \
+ wget https://github.com/intel/intel-graphics-compiler/releases/download/v2.30.1/intel-igc-opencl-2_2.30.1+20950_amd64.deb && \
+ wget https://github.com/intel/compute-runtime/releases/download/26.09.37435.1/intel-ocloc-dbgsym_26.09.37435.1-0_amd64.ddeb && \
+ wget https://github.com/intel/compute-runtime/releases/download/26.09.37435.1/intel-ocloc_26.09.37435.1-0_amd64.deb && \
+ wget https://github.com/intel/compute-runtime/releases/download/26.09.37435.1/intel-opencl-icd-dbgsym_26.09.37435.1-0_amd64.ddeb && \
+ wget https://github.com/intel/compute-runtime/releases/download/26.09.37435.1/intel-opencl-icd_26.09.37435.1-0_amd64.deb && \
+ wget https://github.com/intel/compute-runtime/releases/download/26.09.37435.1/libigdgmm12_22.9.0_amd64.deb && \
+ wget https://github.com/intel/compute-runtime/releases/download/26.09.37435.1/libze-intel-gpu1-dbgsym_26.09.37435.1-0_amd64.ddeb && \
+ wget https://github.com/intel/compute-runtime/releases/download/26.09.37435.1/libze-intel-gpu1_26.09.37435.1-0_amd64.deb && \
  dpkg -i *.deb && \
  rm *.deb
 
