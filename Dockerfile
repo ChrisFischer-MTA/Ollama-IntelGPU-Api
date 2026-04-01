@@ -34,8 +34,8 @@ RUN apt update && \
     curl \
     ocl-icd-libopencl1 \
     intel-oneapi-base-toolkit \
-    python3.11 \
-    python3.11-venv
+    python3.13 \
+    python3.13-venv
 
 # How to update:
 # Go to https://github.com/oneapi-src/level-zero/releases/ and get the current release
@@ -66,7 +66,7 @@ RUN mkdir -p /tmp/gpu && \
 
 RUN mkdir /opt/ollama
 
-RUN cd /opt/ollama &&  python3.11 -m venv llm_env && source /opt/ollama/llm_env/bin/activate && pip install --pre --upgrade ipex-llm[cpp]
+RUN cd /opt/ollama &&  python3.13 -m venv llm_env && source /opt/ollama/llm_env/bin/activate && pip install --pre --upgrade ipex-llm[cpp]
 
 RUN apt update && \
     apt install --no-install-recommends -q -y intel-oneapi-runtime-libs
@@ -83,6 +83,7 @@ RUN echo "init-ollama"  >> /opt/ollama/start.sh
 RUN echo "source /opt/intel/oneapi/setvars.sh" >> /opt/ollama/start.sh
 RUN echo "/opt/ollama/ollama serve" >> /opt/ollama/start.sh
 RUN chmod +x /opt/ollama/start.sh
+RUN /opt/ollama/ollama --version
 
 
 # Install Ollama Portable Zip
